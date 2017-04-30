@@ -478,7 +478,6 @@ void fillScreen3(unsigned short color);
 void drawRect(int row, int col, int height, int width, unsigned short color);
 void setPixel(int row, int col, u16 color);
 void drawImage3(int row, int col, int width, int height, const unsigned short *image);
-
 int collisionLeftHelper(Sprite *spr, int* health);
 int collisionRightHelper(Sprite *spr, int* health);
 int collisionUpHelper(Sprite *spr, int* health);

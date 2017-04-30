@@ -140,32 +140,32 @@ typedef enum {
 } dir;
 
 void updatePosition(Sprite* e) {
-	int r = rand() % 7;
+	//int r = rand() % 7;
 	switch(e[NUMSPR - 1].direction) {
 	case 0:
-		for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].col += i;
-		}
+		//for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].col += 1;
+		//}
 		break;
 	case 1:
-		for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].col -= i;
-		}
+		//for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].col -= 1;
+		//}
 		break;
 	case 2:
-		for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].row -= i;
-		}
+		//for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].row -= 1;
+		//}
 		break;
 	case 3:
-		for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].row += i;
-		}
+		//for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].row += 1;
+		//}
 		break;
 	}
-	for (int i = 0; i < 1000; i++) {
+	/*for (int i = 0; i < 100; i++) {
 		e[NUMSPR - 1].row = e[NUMSPR - 1].row;
-	}
+	}*/
 }
 
 void updateDirection(Sprite* e) {
