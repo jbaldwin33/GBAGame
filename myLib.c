@@ -140,30 +140,48 @@ typedef enum {
 } dir;
 
 void updatePosition(Sprite* e) {
-	//int r = rand() % 7;
+	int posX = e[0].col;
+	int posY = e[0].row;
+	if (e[NUMSPR-1].col > posX) {
+		e[NUMSPR-1].col--;
+	} else if (e[NUMSPR-1].col < posX) {
+		e[NUMSPR-1].col++;
+	}
+	if (e[NUMSPR-1].row > posY) {
+		e[NUMSPR-1].row--;
+	} else if (e[NUMSPR-1].row < posY) {
+		e[NUMSPR-1].row++;
+	}
+	
+	
+	
+	
+	
+	
+	/*int r = rand() % 7;
 	switch(e[NUMSPR - 1].direction) {
 	case 0:
-		//for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].col += 1;
-		//}
+		for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].col += i;
+		}
 		break;
 	case 1:
-		//for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].col -= 1;
-		//}
+		for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].col -= i;
+		}
 		break;
 	case 2:
-		//for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].row -= 1;
-		//}
+		for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].row -= i;
+		}
 		break;
 	case 3:
-		//for (int i = 0; i < r; i++) {
-			e[NUMSPR - 1].row += 1;
-		//}
+		for (int i = 0; i < r; i++) {
+			e[NUMSPR - 1].row += i;
+		}
 		break;
 	}
-	/*for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 1000; i++) {
 		e[NUMSPR - 1].row = e[NUMSPR - 1].row;
 	}*/
 }
